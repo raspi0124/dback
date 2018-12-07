@@ -12,11 +12,11 @@ backupto = "raspi0124/" + tobackupid + ":" + var + ""
 print("backing up " + tobackupid + ", version " + var + " with repo of " + backupto + "")
 cmdlib = "sudo docker commit " + tobackupid + " " + backupto + ""
 print("executing following command.." + cmdlib + "")
-rutlib = subprocess.check_output( cmdlib.split(" ") )
+subprocess.call(cmdlib.split())
 print("executed!")
 cmdlib = "sudo docker save " + backupto + " > /home/raspi0124/docker_backup/" + tobackupid + "_" + var +  ".tar"
 print("executing following command.." + cmdlib + "")
-rutlib = subprocess.check_output( cmdlib.split(" ") )
+subprocess.call(cmdlib.split())
 print("executed!")
 print("Finishing process..")
 exit()
