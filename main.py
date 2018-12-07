@@ -14,7 +14,7 @@ cmdlib = "sudo docker commit " + tobackupid + " " + backupto + ""
 print("executing following command.." + cmdlib + "")
 subprocess.call(cmdlib.split())
 print("executed!")
-cmdlib = "sudo docker save " + backupto + " > /home/raspi0124/docker_backup/" + tobackupid + "_" + var +  ".tar"
+cmdlib = "sudo docker -o save " + backupto + " > /home/raspi0124/docker_backup/" + tobackupid + "_" + var +  ".tar"
 print("executing following command.." + cmdlib + "")
 subprocess.call(cmdlib.split())
 print("executed!")
