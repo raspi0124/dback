@@ -1,7 +1,7 @@
 import subprocess
 import sys
 args = sys.argv
-from datetime import datetime
+import datetime
 d = datetime.date.today()
 year = d.strftime('%y')
 month = d.strftime('%m')
