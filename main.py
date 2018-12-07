@@ -2,11 +2,10 @@ import subprocess
 import sys
 args = sys.argv
 from datetime import datetime
-
-now = datetime.now()
-year = str(now.year)
-month = str(now.month)
-day = str(now.day)
+d = datetime.date.today()
+year = d.strftime('%y')
+month = d.strftime('%m')
+day = d.strftime('%d')
 var = "" + year + "" + month + "" + day + ""
 tobackupid = args[1]
 backupto = "raspi0124/" + tobackupid + ":" + var + ""
