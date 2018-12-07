@@ -11,7 +11,7 @@ var = "" + year + "" + month + "" + day + ""
 tobackupid = args[1]
 backupto = "raspi0124/" + tobackupid + ":" + var + ""
 print("backing up " + tobackupid + ", version " + var + " with repo of " + backupto + "")
-cmdlib = "sudo docker commit " + tobackupid + " " + var + ""
+cmdlib = "sudo docker commit " + tobackupid + " " + backupto + ""
 print("executing following command.." + cmdlib + "")
 rutlib = subprocess.check_output( cmdlib.split(" ") )
 print("executed!")
